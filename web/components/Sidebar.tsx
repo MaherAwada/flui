@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, MapPin, Star, Car, FileText } from 'lucide-react';
+import { LayoutDashboard, MapPin, Star, Car, FileText, Zap } from 'lucide-react';
 
 const menuItems = [
   { icon: LayoutDashboard, label: 'Dashboard', href: '/dashboard' },
@@ -17,10 +17,10 @@ export default function Sidebar() {
 
   return (
     <aside style={{
-      width: '200px',
+      width: '240px',
       minHeight: '100vh',
-      backgroundColor: '#0d0a1a',
-      borderRight: '1px solid #2a1d4a',
+      backgroundColor: '#1B062D',
+      borderRight: '1px solid #B14DFF33',
       display: 'flex',
       flexDirection: 'column',
       padding: '20px 0',
@@ -29,7 +29,7 @@ export default function Sidebar() {
       top: 0,
     }}>
       {/* Logo */}
-      <div style={{ padding: '0 16px 32px 16px' }}>
+      <div style={{ padding: '0 20px 32px 20px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <div style={{
             width: '36px',
@@ -39,8 +39,9 @@ export default function Sidebar() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '18px',
-          }}>⚡</div>
+          }}>
+            <Zap size={20} color="#fff" />
+          </div>
           <div>
             <div style={{ fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>FLUI</div>
             <div style={{ fontSize: '11px', color: '#6b7280' }}>Admin Dashboard</div>
@@ -49,7 +50,7 @@ export default function Sidebar() {
       </div>
 
       {/* Menu */}
-      <nav style={{ flex: 1, padding: '0 8px' }}>
+      <nav style={{ flex: 1, padding: '0 10px' }}>
         {menuItems.map((item) => {
           const Icon = item.icon;
           const isActive = pathname === item.href;
@@ -59,16 +60,15 @@ export default function Sidebar() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '10px',
-                padding: '10px 12px',
+                padding: '10px 14px',
                 borderRadius: '10px',
                 marginBottom: '4px',
                 backgroundColor: isActive ? '#7c3aed' : 'transparent',
-                color: isActive ? '#fff' : '#a78bfa',
+                color: isActive ? '#fff' : '#B8B8C2',
                 cursor: 'pointer',
-                transition: 'all 0.2s',
                 fontSize: '14px',
               }}>
-                <Icon size={18} />
+                <Icon size={18} color={isActive ? '#fff' : '#B8B8C2'} />
                 {item.label}
               </div>
             </Link>
@@ -77,15 +77,14 @@ export default function Sidebar() {
       </nav>
 
       {/* Voltar ao Início */}
-      <div style={{ padding: '16px' }}>
+      <div style={{ padding: '16px 10px' }}>
         <Link href="/" style={{ textDecoration: 'none' }}>
           <div style={{
-            backgroundColor: '#1e1535',
-            border: '1px solid #2a1d4a',
+            backgroundColor: '#2A1240',
             borderRadius: '10px',
             padding: '10px',
             textAlign: 'center',
-            color: '#a78bfa',
+            color: '#D6A8FF',
             fontSize: '14px',
             cursor: 'pointer',
           }}>

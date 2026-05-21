@@ -15,26 +15,26 @@ export default function Avaliacoes() {
 
   return (
     <div>
-      <h1 style={{ fontSize: '28px', fontWeight: 'bold', color: '#fff', marginBottom: '8px' }}>
+      <h1 style={{ fontSize: '28px', fontWeight: '400', color: '#fff', marginBottom: '8px' }}>
         Avaliações e Curadoria
       </h1>
-      <p style={{ color: '#6b7280', marginBottom: '32px' }}>Revisar e moderar comentários dos usuários</p>
+      <p style={{ color: '#B8B8C2', marginBottom: '32px' }}>Revisar e moderar comentários dos usuários</p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         {avaliacoes.map((a) => (
           <div key={a.id} style={{
-            backgroundColor: '#1e1535',
-            border: '1px solid #2a1d4a',
+            backgroundColor: '#1B062D',
+            border: '1px solid #B14DFF33',
             borderRadius: '16px',
             padding: '24px',
           }}>
             {/* Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
               <div>
-                <h3 style={{ color: '#fff', fontSize: '16px', fontWeight: '600', marginBottom: '4px' }}>
+                <h3 style={{ color: '#fff', fontSize: '16px', fontWeight: '400', marginBottom: '4px' }}>
                   {a.eletroposto}
                 </h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#6b7280', fontSize: '13px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#B8B8C2', fontSize: '13px' }}>
                   <span>{a.autor}</span>
                   <span>•</span>
                   <span>{a.tempo}</span>
@@ -46,15 +46,15 @@ export default function Avaliacoes() {
                   <Star
                     key={s}
                     size={18}
-                    color="#f59e0b"
-                    fill={s <= a.estrelas ? '#f59e0b' : 'transparent'}
+                    color="#FFC857"
+                    fill={s <= a.estrelas ? '#FFC857' : 'transparent'}
                   />
                 ))}
               </div>
             </div>
 
             {/* Comentário */}
-            <p style={{ color: '#a78bfa', fontSize: '14px', marginBottom: '16px', fontStyle: 'italic' }}>
+            <p style={{ color: '#D6A8FF', fontSize: '14px', marginBottom: '16px' }}>
               "{a.comentario}"
             </p>
 
@@ -64,15 +64,15 @@ export default function Avaliacoes() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '6px',
-                backgroundColor: '#0d2e22',
-                border: '1px solid #10b981',
+                backgroundColor: '#2DFFB433',
+                border: '1px solid #2DFFB44D',
                 borderRadius: '8px',
                 padding: '8px 16px',
-                color: '#10b981',
+                color: '#2DFFB4',
                 fontSize: '13px',
                 fontWeight: '600',
               }}>
-                <CheckCircle size={14} />
+                <CheckCircle size={14} color="#2DFFB4" />
                 Aprovado
               </div>
             ) : (
@@ -82,16 +82,16 @@ export default function Avaliacoes() {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '6px',
-                  backgroundColor: '#0d2e22',
-                  border: '1px solid #10b981',
+                  backgroundColor: '#2DFFB433',
+                  border: '1px solid #2DFFB44D',
                   borderRadius: '8px',
                   padding: '8px 16px',
-                  color: '#10b981',
+                  color: '#2DFFB4',
                   fontSize: '13px',
                   fontWeight: '600',
                   cursor: 'pointer',
                 }}>
-                <CheckCircle size={14} />
+                <CheckCircle size={14} color="#2DFFB4" />
                 Aprovar
               </button>
             )}
