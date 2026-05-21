@@ -14,9 +14,20 @@ export default function DashboardLayout({
         padding: '40px',
         minHeight: '100vh',
         backgroundColor: '#0A0514',
-      }}>
+      }}
+        className="dashboard-main"
+      >
         {children}
       </main>
+      <style>{`
+        @media (max-width: 768px) {
+          .dashboard-main {
+            margin-left: 0 !important;
+            padding: 20px !important;
+            padding-top: 64px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
