@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Zap, MapPin, BarChart2, Smartphone } from 'lucide-react';
+import { Zap, BarChart2, Smartphone } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -31,16 +31,18 @@ export default function Home() {
       {/* Tagline */}
       <h1 style={{
         fontSize: '20px',
-        color: '#a78bfa',
+        color: '#D6A8FF',
         marginBottom: '16px',
         textAlign: 'center',
+        fontFamily: 'var(--font-inter), sans-serif',
+        fontWeight: '400',
       }}>
         O sistema operacional da mobilidade elétrica
       </h1>
 
       <p style={{
         fontSize: '15px',
-        color: '#6b7280',
+        color: '#B8B8C2',
         textAlign: 'center',
         maxWidth: '480px',
         marginBottom: '40px',
@@ -62,7 +64,7 @@ export default function Home() {
             borderRadius: '12px',
             padding: '14px 28px',
             fontSize: '15px',
-            fontWeight: '600',
+            fontWeight: '400',
             cursor: 'pointer',
           }}>
             <Smartphone size={18} />
@@ -76,12 +78,12 @@ export default function Home() {
             alignItems: 'center',
             gap: '8px',
             backgroundColor: 'transparent',
-            color: '#a78bfa',
-            border: '1px solid #7c3aed',
+            color: '#D6A8FF',
+            border: '2px solid #B14DFF',
             borderRadius: '12px',
             padding: '14px 28px',
             fontSize: '15px',
-            fontWeight: '600',
+            fontWeight: '400',
             cursor: 'pointer',
           }}>
             <BarChart2 size={18} />
@@ -100,27 +102,27 @@ export default function Home() {
       }}>
         {[
           {
-            icon: <Zap size={24} color="#10b981" />,
-            bg: '#0d2e22',
+            icon: <Zap size={24} color="#2DFFB4" />,
+            iconBg: '#2DFFB433',
             title: 'Mapa Inteligente',
             desc: 'Encontre eletropostos com avaliações reais e FLUI Score',
           },
           {
-            icon: <BarChart2 size={24} color="#a78bfa" />,
-            bg: '#1e1535',
+            icon: <BarChart2 size={24} color="#B14DFF" />,
+            iconBg: '#B14DFF33',
             title: 'Planejador de Viagem',
             desc: 'Descubra se você chega ao destino e onde parar',
           },
           {
-            icon: <Smartphone size={24} color="#a78bfa" />,
-            bg: '#1e1535',
+            icon: <Smartphone size={24} color="#D6A8FF" />,
+            iconBg: '#D6A8FF33',
             title: 'Vale Migrar?',
             desc: 'Compare custos e descubra sua economia real',
           },
         ].map((card, i) => (
           <div key={i} style={{
-            backgroundColor: card.bg,
-            border: '1px solid #2a1d4a',
+            backgroundColor: '#1B062D80',
+            border: '1px solid #B14DFF33',
             borderRadius: '16px',
             padding: '28px 24px',
             width: '240px',
@@ -134,16 +136,15 @@ export default function Home() {
               width: '48px',
               height: '48px',
               borderRadius: '12px',
-              backgroundColor: card.bg,
-              border: '1px solid #2a1d4a',
+              backgroundColor: card.iconBg,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}>
               {card.icon}
             </div>
-            <h3 style={{ color: '#fff', fontSize: '15px', fontWeight: '600' }}>{card.title}</h3>
-            <p style={{ color: '#6b7280', fontSize: '13px', lineHeight: '1.5' }}>{card.desc}</p>
+            <h3 style={{ color: '#ffffff', fontSize: '15px', fontWeight: '400' }}>{card.title}</h3>
+            <p style={{ color: '#B8B8C2', fontSize: '13px', lineHeight: '1.5' }}>{card.desc}</p>
           </div>
         ))}
       </div>
