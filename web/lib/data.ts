@@ -1,4 +1,42 @@
-export const eletropostos = [
+export type Eletroposto = {
+  id: number;
+  nome: string;
+  cidade: string;
+  estado: string;
+  endereco: string;
+  score: number;
+  carregadores: number;
+  disponiveis: number;
+  conectores: string[];
+  potencia: string;
+  horario: string;
+  comodidades: string[];
+  lat: number;
+  lng: number;
+};
+
+export type Avaliacao = {
+  id: number;
+  eletroposto: string;
+  eletroposto_id: number;
+  autor: string;
+  tempo: string;
+  estrelas: number;
+  comentario: string;
+  aprovado: boolean;
+};
+
+export type EV = {
+  id: number;
+  modelo: string;
+  ano: number;
+  preco: number;
+  bateria: number;
+  autonomia: number;
+  score: number;
+};
+
+export const eletropostos: Eletroposto[] = [
   {
     id: 1,
     nome: "Shopping Iguatemi",
@@ -81,7 +119,7 @@ export const eletropostos = [
   },
 ];
 
-export const avaliacoes = [
+export const avaliacoes: Avaliacao[] = [
   {
     id: 1,
     eletroposto: "Shopping Iguatemi",
@@ -124,7 +162,7 @@ export const avaliacoes = [
   },
 ];
 
-export const evs = [
+export const evs: EV[] = [
   {
     id: 1,
     modelo: "Tesla Model 3 Long Range",
