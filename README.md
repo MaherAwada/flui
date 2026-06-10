@@ -4,7 +4,7 @@ Plataforma completa para o ecossistema de veículos elétricos, composta por app
 
 ---
 
-## 🏗️ Arquitetura
+##  Arquitetura
 flui/
 ├── web/        # Next.js 14 + Tailwind CSS (Painel Administrativo)
 ├── mobile/     # React Native + Expo (App Motoristas)
@@ -12,7 +12,7 @@ flui/
 
 ---
 
-## 🚀 Deploy
+##  Deploy
 
 | Plataforma | URL |
 |------------|-----|
@@ -22,7 +22,7 @@ flui/
 
 ---
 
-## 🔌 API REST — Endpoints
+##  API REST — Endpoints
 
 ### Autenticação
 | Método | Endpoint | Descrição |
@@ -56,7 +56,7 @@ flui/
 
 ---
 
-## 🗄️ Banco de Dados
+##  Banco de Dados
 
 ### Tabelas
 - **usuarios** — motoristas e administradores
@@ -66,7 +66,7 @@ flui/
 
 ---
 
-## 🔐 Autenticação
+##  Autenticação
 
 JWT (JSON Web Token) com dois perfis:
 - **motorista** — acesso ao app mobile
@@ -77,7 +77,7 @@ Credenciais de teste:
 
 ---
 
-## 🛠️ Como rodar localmente
+##  Como rodar localmente
 
 ### Web
 ```bash
@@ -105,7 +105,7 @@ npm run web
 
 ---
 
-## 👥 Integrantes
+##  Integrantes
 
 | Nome | RM |
 |------|----|
@@ -116,7 +116,7 @@ npm run web
 
 ---
 
-## 🎨 Stack Tecnológica
+##  Stack Tecnológica
 
 - **Frontend Web:** Next.js 14, Tailwind CSS, TypeScript
 - **Mobile:** React Native, Expo
